@@ -11,8 +11,6 @@
 		6F80521127C390A4002C7E79 /* Mix___MixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80520027C390A2002C7E79 /* Mix___MixApp.swift */; };
 		6F80521227C390A4002C7E79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80520127C390A2002C7E79 /* ContentView.swift */; };
 		6F80521327C390A4002C7E79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80520127C390A2002C7E79 /* ContentView.swift */; };
-		6F80521427C390A4002C7E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F80520227C390A4002C7E79 /* Assets.xcassets */; };
-		6F80521527C390A4002C7E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F80520227C390A4002C7E79 /* Assets.xcassets */; };
 		6F80521F27C3926B002C7E79 /* cocktail_resource.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F80521E27C3926B002C7E79 /* cocktail_resource.json */; };
 		6F80522027C3926B002C7E79 /* cocktail_resource.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F80521E27C3926B002C7E79 /* cocktail_resource.json */; };
 		6F80522227C392B6002C7E79 /* CocktailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80522127C392B6002C7E79 /* CocktailDataModel.swift */; };
@@ -21,12 +19,13 @@
 		6F80522627C3936E002C7E79 /* CocktailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80522427C3936E002C7E79 /* CocktailData.swift */; };
 		6F80522927C3D622002C7E79 /* CocktailListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80522827C3D622002C7E79 /* CocktailListCellView.swift */; };
 		6F80522A27C3D622002C7E79 /* CocktailListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80522827C3D622002C7E79 /* CocktailListCellView.swift */; };
+		6FAF23D027C3DACD001B5CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */; };
+		6FAF23D127C3DACD001B5CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6F80520027C390A2002C7E79 /* Mix___MixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mix___MixApp.swift"; sourceTree = "<group>"; };
 		6F80520127C390A2002C7E79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6F80520227C390A4002C7E79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F80520727C390A4002C7E79 /* Mix & Mix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mix & Mix.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F80520D27C390A4002C7E79 /* Mix & Mix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mix & Mix.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F80520F27C390A4002C7E79 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		6F80522127C392B6002C7E79 /* CocktailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDataModel.swift; sourceTree = "<group>"; };
 		6F80522427C3936E002C7E79 /* CocktailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailData.swift; sourceTree = "<group>"; };
 		6F80522827C3D622002C7E79 /* CocktailListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListCellView.swift; sourceTree = "<group>"; };
+		6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			children = (
 				6F80520027C390A2002C7E79 /* Mix___MixApp.swift */,
 				6F80520127C390A2002C7E79 /* ContentView.swift */,
-				6F80520227C390A4002C7E79 /* Assets.xcassets */,
+				6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */,
 				6F80521E27C3926B002C7E79 /* cocktail_resource.json */,
 				6F80522727C3D605002C7E79 /* Model */,
 				6F80522827C3D622002C7E79 /* CocktailListCellView.swift */,
@@ -181,7 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F80521427C390A4002C7E79 /* Assets.xcassets in Resources */,
+				6FAF23D027C3DACD001B5CD6 /* Assets.xcassets in Resources */,
 				6F80521F27C3926B002C7E79 /* cocktail_resource.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F80521527C390A4002C7E79 /* Assets.xcassets in Resources */,
+				6FAF23D127C3DACD001B5CD6 /* Assets.xcassets in Resources */,
 				6F80522027C3926B002C7E79 /* cocktail_resource.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,13 @@ import Foundation
 
 
 class CocktailData: ObservableObject{
-    @Published  var cocktailData: CocktailDataModel?
+    
+    @Published  var cocktailData: [Drinks]?
+    var sample = Drinks(
+        strDrink: "1-900-FUK-MEUP",
+        strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/uxywyw1468877224.jpg",
+        idDrink: "15395"
+    )
     
     init() {
         let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")!
@@ -17,10 +23,8 @@ class CocktailData: ObservableObject{
             do {
                 if let cocktailData = data {
                     let decodedData = try JSONDecoder().decode(CocktailDataModel.self, from: cocktailData)
-                
-                    
                 DispatchQueue.main.async {
-                    self.cocktailData = decodedData
+                    self.cocktailData = decodedData.drinks
                 }
                 }
                 else {
@@ -33,4 +37,3 @@ class CocktailData: ObservableObject{
         
     }
 }
-

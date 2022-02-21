@@ -9,15 +9,15 @@ import SwiftUI
 
 struct CocktailListCellView: View {
     let cocktail: Drinks?
-    let width: CGFloat?
+    let customSize: CGFloat?
     
     var body: some View {
-        HStack {
+        HStack(alignment: VerticalAlignment.top, spacing: 5) {
             AsyncImage(url: cocktail?.urlImage) { image in
                 image
                     .resizable()
                     .scaledToFit()
-                    .frame(width: width ?? 100.0)
+                    .frame(width: customSize ?? 100.0, height: customSize ?? 100.0)
                     .aspectRatio(1, contentMode: .fit)
                     
                     .clipShape(
@@ -28,14 +28,21 @@ struct CocktailListCellView: View {
                             .stroke(lineWidth: 5)
                             .foregroundColor(.gray.opacity(0.5))
                     )
+                    .padding(EdgeInsets(top: 3, leading: 3, bottom: 3, trailing: 0))
                 
             } placeholder: {
-                ProgressView()
+                Image(systemName: "slowmo")
+                    .frame(
+                        width: customSize ?? 100.0,
+                        height: customSize ?? 100.0
+                    )
             }
      
-            VStack(spacing: 5) {
+            VStack(alignment: HorizontalAlignment.leading,spacing: 5) {
                 Text(cocktail?.strDrink ?? "No Cocktail")
                     .font(.system(size: 18, weight: .bold, design: .monospaced))
+                
+                    
                 Button("More Info") {
                     print("Not Yet..")
                 }
@@ -47,6 +54,6 @@ struct CocktailListCellView: View {
 
 struct CocktailListCellView_Previews: PreviewProvider {
     static var previews: some View {
-        CocktailListCellView(cocktail: nil, width: nil)
+        CocktailListCellView(cocktail: nil, customSize: nil)
     }
 }

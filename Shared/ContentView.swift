@@ -10,11 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var data = CocktailData()
-    
     var body: some View {
-        let sample = data.cocktailData?.drinks[0]
-        
-        CocktailListCellView(cocktail: sample, width: 100)
+        NavigationView {
+            List(data.cocktailData ?? [data.sample]) { item in
+                CocktailListCellView(cocktail: item, customSize: 80)
+            }
+            .navigationTitle("MIX & MIX")
+        }
     }
 }
 
