@@ -25,6 +25,8 @@
 		6FAF23D427C3E508001B5CD6 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23D227C3E508001B5CD6 /* CocktailDetailView.swift */; };
 		6FAF23DD27C40011001B5CD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23DC27C40011001B5CD6 /* Constant.swift */; };
 		6FAF23DE27C40011001B5CD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23DC27C40011001B5CD6 /* Constant.swift */; };
+		6FAF23E027C4012E001B5CD6 /* CocktailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23DF27C4012E001B5CD6 /* CocktailListView.swift */; };
+		6FAF23E127C4012E001B5CD6 /* CocktailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23DF27C4012E001B5CD6 /* CocktailListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		6FAF23D227C3E508001B5CD6 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
 		6FAF23DC27C40011001B5CD6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		6FAF23DF27C4012E001B5CD6 /* CocktailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 				6F80522827C3D622002C7E79 /* CocktailListCellView.swift */,
 				6F80520127C390A2002C7E79 /* ContentView.swift */,
 				6FAF23D227C3E508001B5CD6 /* CocktailDetailView.swift */,
+				6FAF23DF27C4012E001B5CD6 /* CocktailListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +224,7 @@
 			files = (
 				6FAF23DD27C40011001B5CD6 /* Constant.swift in Sources */,
 				6F80521227C390A4002C7E79 /* ContentView.swift in Sources */,
+				6FAF23E027C4012E001B5CD6 /* CocktailListView.swift in Sources */,
 				6F80522227C392B6002C7E79 /* CocktailDataModel.swift in Sources */,
 				6F80522527C3936E002C7E79 /* CocktailData.swift in Sources */,
 				6FAF23D327C3E508001B5CD6 /* CocktailDetailView.swift in Sources */,
@@ -234,6 +239,7 @@
 			files = (
 				6FAF23DE27C40011001B5CD6 /* Constant.swift in Sources */,
 				6F80521327C390A4002C7E79 /* ContentView.swift in Sources */,
+				6FAF23E127C4012E001B5CD6 /* CocktailListView.swift in Sources */,
 				6F80522327C392B6002C7E79 /* CocktailDataModel.swift in Sources */,
 				6F80522627C3936E002C7E79 /* CocktailData.swift in Sources */,
 				6FAF23D427C3E508001B5CD6 /* CocktailDetailView.swift in Sources */,

@@ -9,22 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var data = CocktailData(from: Constant.nonAlcoholicURL)
+    @ObservedObject var alcoholCocktailData = CocktailData(from: Constant.alcoholicURL)
+    @ObservedObject var nonAlcoholCocktailData = CocktailData(from: Constant.nonAlcoholicURL)
     var body: some View {
-        NavigationView {
-            List{
-                ForEach(data.cocktailData ?? [data.sample]) {
-                    cocktail in
-                    NavigationLink {
-                        CocktailDetailView(cocktail: cocktail)
-                    } label: {
-                        CocktailListCellView(cocktail: cocktail, customSize: 100)
-                    }
-
+        TabView {
+            CocktailListView(data: alcoholCocktailData)
+                .tabItem {
+                    Text("Alcohol")
                 }
-            }
-            .navigationTitle("MIX & MIX")
-            .navigationBarTitleDisplayMode(.large)
+            
+            CocktailListView(data: nonAlcoholCocktailData)
+                .tabItem {
+                    Text("Non-Alcohol")
+                }
         }
     }
 }
