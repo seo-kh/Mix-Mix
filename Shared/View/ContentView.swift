@@ -8,20 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isAlcohol: Bool = true
+    @ObservedObject var alcoholCocktailData: CocktailData = CocktailData(from: Constant.alcoholicURL)
+    @ObservedObject var nonAlcoholCocktailData: CocktailData = CocktailData(from: Constant.nonAlcoholicURL)
     
-    @ObservedObject var alcoholCocktailData = CocktailData(from: Constant.alcoholicURL)
-    @ObservedObject var nonAlcoholCocktailData = CocktailData(from: Constant.nonAlcoholicURL)
     var body: some View {
-        TabView {
+        TabView(selection: $isAlcohol) {
             CocktailListView(data: alcoholCocktailData)
-                .tabItem {
-                    Text("Alcohol")
+                .tabItem() {
+                    Label {
+                        Text("Alcohol")
+                            .font(.system(size: 12))
+                            .onTapGesture {
+                                isAlcohol.toggle()
+                            }
+                    } icon: {
+                        isAlcohol ? Image("alcohol") : Image("blank-cocktail")
+                    }
                 }
+                .tag(true)
+            
+            
+            
+            
             
             CocktailListView(data: nonAlcoholCocktailData)
                 .tabItem {
-                    Text("Non-Alcohol")
+                    Label {
+                        Text("Non-Alcohol")
+                            .font(.system(size: 12))
+                            .onTapGesture {
+                                isAlcohol.toggle()
+                            }
+                    } icon: {
+                        !isAlcohol ? Image("non-alcohol") : Image("blank-cocktail")
+                    }
                 }
+                .tag(false)
+            
         }
     }
 }
