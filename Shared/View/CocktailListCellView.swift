@@ -40,7 +40,10 @@ struct CocktailListCellView: View {
      
             VStack(alignment: HorizontalAlignment.leading,spacing: 5) {
                 Text(cocktail?.strDrink ?? "No Cocktail")
-                    .font(.system(size: 18, weight: .bold, design: .monospaced))
+                    .font(.system(size: 18, weight: .medium, design: .monospaced))
+                    .lineLimit(2)
+                    .dynamicTypeSize(/*@START_MENU_TOKEN@*/.medium/*@END_MENU_TOKEN@*/)
+                    .minimumScaleFactor(0.8)
                 
                     
                 Button("More Info") {

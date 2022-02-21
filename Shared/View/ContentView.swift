@@ -12,10 +12,19 @@ struct ContentView: View {
     @ObservedObject var data = CocktailData()
     var body: some View {
         NavigationView {
-            List(data.cocktailData ?? [data.sample]) { item in
-                CocktailListCellView(cocktail: item, customSize: 80)
+            List{
+                ForEach(data.cocktailData ?? [data.sample]) {
+                    cocktail in
+                    NavigationLink {
+                        CocktailDetailView(cocktail: cocktail)
+                    } label: {
+                        CocktailListCellView(cocktail: cocktail, customSize: 100)
+                    }
+
+                }
             }
             .navigationTitle("MIX & MIX")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
