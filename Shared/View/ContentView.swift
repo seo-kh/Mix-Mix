@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var data = CocktailData()
+    @ObservedObject var data = CocktailData(from: Constant.nonAlcoholicURL)
     var body: some View {
         NavigationView {
             List{

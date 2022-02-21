@@ -9,7 +9,7 @@ import Foundation
 
 
 class CocktailData: ObservableObject{
-    
+    let url: URL
     @Published  var cocktailData: [Drinks]?
     var sample = Drinks(
         strDrink: "1-900-FUK-MEUP",
@@ -17,8 +17,8 @@ class CocktailData: ObservableObject{
         idDrink: "15395"
     )
     
-    init() {
-        let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")!
+    init(from url: URL) {
+        self.url = url
         URLSession.shared.dataTask(with: url) { data, response, error in
             do {
                 if let cocktailData = data {
