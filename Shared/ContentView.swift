@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var data = CocktailData()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        let sample = data.cocktailData?.drinks[0]
+        
+        CocktailListCellView(cocktail: sample, width: 100)
     }
 }
 
