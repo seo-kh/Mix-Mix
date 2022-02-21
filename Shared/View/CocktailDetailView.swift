@@ -23,6 +23,7 @@ struct CocktailDetailView: View {
                         .aspectRatio(5/4, contentMode: .fit)
                 } else {
                     ProgressView()
+                        .frame(width: 100, height: 100)
                 }
             }
             Spacer()

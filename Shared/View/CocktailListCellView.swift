@@ -31,7 +31,7 @@ struct CocktailListCellView: View {
                     .padding(EdgeInsets(top: 3, leading: 3, bottom: 3, trailing: 0))
                 
             } placeholder: {
-                Image(systemName: "slowmo")
+                ProgressView()
                     .frame(
                         width: customSize ?? 100.0,
                         height: customSize ?? 100.0

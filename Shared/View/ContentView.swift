@@ -28,10 +28,6 @@ struct ContentView: View {
                 }
                 .tag(true)
             
-            
-            
-            
-            
             CocktailListView(data: nonAlcoholCocktailData)
                 .tabItem {
                     Label {

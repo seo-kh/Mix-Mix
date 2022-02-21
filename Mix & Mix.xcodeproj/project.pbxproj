@@ -114,8 +114,8 @@
 		6FAF23D527C3ECD0001B5CD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6F80522827C3D622002C7E79 /* CocktailListCellView.swift */,
 				6F80520127C390A2002C7E79 /* ContentView.swift */,
+				6F80522827C3D622002C7E79 /* CocktailListCellView.swift */,
 				6FAF23D227C3E508001B5CD6 /* CocktailDetailView.swift */,
 				6FAF23DF27C4012E001B5CD6 /* CocktailListView.swift */,
 			);
