@@ -9,3 +9,6 @@ Personal SwiftUI Project
 
 <img width="30%" src="https://user-images.githubusercontent.com/68586179/159412378-0aee071f-5a87-4083-a5bf-b080c79f7667.gif"/>
 
+---
+
+(업데이트 중입니다..)
