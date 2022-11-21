@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CocktailListCellView: View {
-    let cocktail: Drinks?
+    let drink: Drink?
     let customSize: CGFloat?
     
     var body: some View {
         HStack(alignment: VerticalAlignment.top, spacing: 5) {
-            AsyncImage(url: cocktail?.urlImage) { image in
+            AsyncImage(url: drink?.drinkImage) { image in
                 image
                     .resizable()
                     .scaledToFit()
@@ -39,24 +39,16 @@ struct CocktailListCellView: View {
             }
      
             VStack(alignment: HorizontalAlignment.leading,spacing: 5) {
-                Text(cocktail?.strDrink ?? "No Cocktail")
-                    .font(.system(size: 18, weight: .medium, design: .monospaced))
+                Text(drink?.drinkName ?? "No Cocktail")
+                    .font(.body)
                     .lineLimit(2)
-                    .dynamicTypeSize(/*@START_MENU_TOKEN@*/.medium/*@END_MENU_TOKEN@*/)
-                    .minimumScaleFactor(0.8)
-                
                     
-                Button("More Info") {
-                    print("Not Yet..")
-                }
+                Text(drink?.drinkInstructions ?? "No Instructions")
+                    .font(.caption)
+                    .lineLimit(2)
             }
             .padding()
         }
         .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
-    }}
-
-struct CocktailListCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        CocktailListCellView(cocktail: nil, customSize: nil)
     }
 }

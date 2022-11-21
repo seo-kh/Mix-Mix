@@ -9,12 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isAlcohol: Bool = true
-    @ObservedObject var alcoholCocktailData: CocktailData = CocktailData(from: Constant.alcoholicURL)
-    @ObservedObject var nonAlcoholCocktailData: CocktailData = CocktailData(from: Constant.nonAlcoholicURL)
+    @ObservedObject var alcoholCocktailData: CocktailData = CocktailData(from: Constant.cocktailURL)
+    
+    var alcoholCocktail: [Drink] { alcoholCocktailData.drinks.filter { $0.isAlcohol } }
+    var nonAlcoholCocktail: [Drink] { alcoholCocktailData.drinks.filter { !$0.isAlcohol } }
     
     var body: some View {
         TabView(selection: $isAlcohol) {
-            CocktailListView(data: alcoholCocktailData)
+            CocktailListView(drinks: alcoholCocktail)
                 .tabItem() {
                     Label {
                         Text("Alcohol")
@@ -23,12 +25,12 @@ struct ContentView: View {
                                 isAlcohol.toggle()
                             }
                     } icon: {
-                        isAlcohol ? Image("alcohol") : Image("blank-cocktail")
+                        isAlcohol ? Image(systemName: "drop.degreesign") : Image(systemName: "drop")
                     }
                 }
                 .tag(true)
             
-            CocktailListView(data: nonAlcoholCocktailData)
+            CocktailListView(drinks: nonAlcoholCocktail)
                 .tabItem {
                     Label {
                         Text("Non-Alcohol")
@@ -37,7 +39,7 @@ struct ContentView: View {
                                 isAlcohol.toggle()
                             }
                     } icon: {
-                        !isAlcohol ? Image("non-alcohol") : Image("blank-cocktail")
+                        !isAlcohol ? Image(systemName: "drop.degreesign") : Image(systemName: "drop")
                     }
                 }
                 .tag(false)

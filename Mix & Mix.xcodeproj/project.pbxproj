@@ -19,8 +19,6 @@
 		6F80522627C3936E002C7E79 /* CocktailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80522427C3936E002C7E79 /* CocktailData.swift */; };
 		6F80522927C3D622002C7E79 /* CocktailListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80522827C3D622002C7E79 /* CocktailListCellView.swift */; };
 		6F80522A27C3D622002C7E79 /* CocktailListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80522827C3D622002C7E79 /* CocktailListCellView.swift */; };
-		6FAF23D027C3DACD001B5CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */; };
-		6FAF23D127C3DACD001B5CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */; };
 		6FAF23D327C3E508001B5CD6 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23D227C3E508001B5CD6 /* CocktailDetailView.swift */; };
 		6FAF23D427C3E508001B5CD6 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23D227C3E508001B5CD6 /* CocktailDetailView.swift */; };
 		6FAF23DD27C40011001B5CD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF23DC27C40011001B5CD6 /* Constant.swift */; };
@@ -39,10 +37,11 @@
 		6F80522127C392B6002C7E79 /* CocktailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDataModel.swift; sourceTree = "<group>"; };
 		6F80522427C3936E002C7E79 /* CocktailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailData.swift; sourceTree = "<group>"; };
 		6F80522827C3D622002C7E79 /* CocktailListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListCellView.swift; sourceTree = "<group>"; };
-		6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		6FAF23D227C3E508001B5CD6 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
 		6FAF23DC27C40011001B5CD6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6FAF23DF27C4012E001B5CD6 /* CocktailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListView.swift; sourceTree = "<group>"; };
+		6FDFFDDB292B69E1002B244A /* Mix---Mix--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mix---Mix--iOS--Info.plist"; sourceTree = "<group>"; };
+		6FDFFDDC292B6B0D002B244A /* Mix---Mix--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mix---Mix--macOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +65,8 @@
 		6F8051FA27C390A2002C7E79 = {
 			isa = PBXGroup;
 			children = (
+				6FDFFDDC292B6B0D002B244A /* Mix---Mix--macOS--Info.plist */,
+				6FDFFDDB292B69E1002B244A /* Mix---Mix--iOS--Info.plist */,
 				6F8051FF27C390A2002C7E79 /* Shared */,
 				6F80520E27C390A4002C7E79 /* macOS */,
 				6F80520827C390A4002C7E79 /* Products */,
@@ -76,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				6F80520027C390A2002C7E79 /* Mix___MixApp.swift */,
-				6FAF23CF27C3DACD001B5CD6 /* Assets.xcassets */,
 				6F80521E27C3926B002C7E79 /* cocktail_resource.json */,
 				6F80522727C3D605002C7E79 /* Model */,
 				6FAF23D527C3ECD0001B5CD6 /* View */,
@@ -167,7 +167,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					6F80520627C390A4002C7E79 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -201,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FAF23D027C3DACD001B5CD6 /* Assets.xcassets in Resources */,
 				6F80521F27C3926B002C7E79 /* cocktail_resource.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +209,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FAF23D127C3DACD001B5CD6 /* Assets.xcassets in Resources */,
 				6F80522027C3926B002C7E79 /* cocktail_resource.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +283,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -344,6 +343,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -372,6 +372,7 @@
 				DEVELOPMENT_TEAM = WPL7Q42L8U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mix---Mix--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -402,6 +403,7 @@
 				DEVELOPMENT_TEAM = WPL7Q42L8U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mix---Mix--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -429,13 +431,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WPL7Q42L8U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mix---Mix--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,13 +462,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WPL7Q42L8U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mix---Mix--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,28 +8,26 @@
 import SwiftUI
 
 struct CocktailListView: View {
-    @ObservedObject var data: CocktailData
+    var drinks: [Drink]
+    
     var body: some View {
         NavigationView {
             List{
-                ForEach(data.cocktailData ?? [data.sample]) {
-                    cocktail in
+                ForEach(drinks) {
+                    drink in
                     NavigationLink {
-                        CocktailDetailView(cocktail: cocktail)
+                        CocktailDetailView(drink: drink)
                     } label: {
-                        CocktailListCellView(cocktail: cocktail, customSize: 100)
+                        CocktailListCellView(drink: drink, customSize: 100)
                     }
 
                 }
             }
             .navigationTitle("MIX & MIX")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.large)
+            #endif
         }
     }
 }
 
-struct CocktailListView_Previews: PreviewProvider {
-    static var previews: some View {
-        CocktailListView(data: CocktailData(from: Constant.nonAlcoholicURL))
-    }
-}
