@@ -9,25 +9,72 @@ import SwiftUI
 
 struct CocktailDetailView: View {
     @Environment(\.presentationMode) var presentation
-    var cocktail: Drinks?
+    var drink: Drink
     
     var body: some View {
-        VStack(alignment: HorizontalAlignment.center, spacing: 9) {
-            Text(cocktail?.strDrink ?? "No Cocktail Here")
-                .font(.system(size: 20, weight: .semibold, design: .default))
+        List {
+            Text(drink.drinkName)
+                .font(.title)
+                .frame(maxWidth: .infinity, alignment: .center)
             
-            AsyncImage(url: cocktail?.urlImage) { phase in
+            AsyncImage(url: drink.drinkImage) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
                         .aspectRatio(5/4, contentMode: .fit)
+                        .cornerRadius(20.0)
                 } else {
                     ProgressView()
+                        .frame(width: 100, height: 100)
                 }
             }
-            Spacer()
+            
+            Section {
+                Text("\(drink.alcohol)".uppercased()).tint(.accentColor)
+            } header: {
+                Text("Alcohol")
+            }
+            
+            Section {
+                Text(drink.drinkInstructions)
+                    .font(.body)
+                
+            } header: {
+                Text("Instructions")
+            }
+            
+            Section {
+                Text(drink.drinkCategory)
+                
+            } header: {
+                Text("Category")
+            }
+            
+            Section {
+                Text(drink.drinkGlass)
+                
+            } header: {
+                Text("Glass")
+            }
+            
+            Section {
+                Text(drink.drinkMeasures.enumerated().map{"- \($1)\n"}.joined().dropLast(2))
+                    .font(.callout)
+            } header: {
+                Text("Measures")
+            }
+            
+            
+            Section {
+                Text(drink.drinkIngredients.enumerated().map{"- \($1)\n"}.joined().dropLast(2))
+                    .font(.callout)
+            } header: {
+                Text("Ingredients")
+            }
         }
         .navigationTitle("MIX & MIX")
+        .listRowSeparator(.hidden)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -38,14 +85,9 @@ struct CocktailDetailView: View {
                     Label("Prev", systemImage: "chevron.left")
                         .labelStyle(.titleAndIcon)
                 }
-
+                
             }
         }
-    }
-}
-
-struct CocktailDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        CocktailDetailView(cocktail: nil)
+        #endif
     }
 }

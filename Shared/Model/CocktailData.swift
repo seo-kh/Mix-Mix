@@ -8,32 +8,20 @@
 import Foundation
 
 
-class CocktailData: ObservableObject{
-    let url: URL
-    @Published  var cocktailData: [Drinks]?
-    var sample = Drinks(
-        strDrink: "1-900-FUK-MEUP",
-        strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/uxywyw1468877224.jpg",
-        idDrink: "15395"
-    )
+struct Drink: Identifiable, Decodable {
+    let drinkIngredients: [String]
+    let drinkMeasures: [String]
+    let drinkName: String
+    let drinkCategory: String
+    let drinkGlass: String
+    let drinkInstructions: String
     
-    init(from url: URL) {
-        self.url = url
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            do {
-                if let cocktailData = data {
-                    let decodedData = try JSONDecoder().decode(CocktailDataModel.self, from: cocktailData)
-                DispatchQueue.main.async {
-                    self.cocktailData = decodedData.drinks
-                }
-                }
-                else {
-                    print("No data")
-                }
-            } catch {
-                print("Error")
-            }
-        }.resume()
-        
-    }
+    let drinkThumb: String
+    let _id: String
+    let alcohol: String
+    
+    var id: String { _id }
+    var isAlcohol: Bool { alcohol == "true" ? true : false }
+    var drinkImage: URL? { URL(string: drinkThumb) }
 }
+    
